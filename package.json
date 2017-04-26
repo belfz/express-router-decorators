@@ -1,0 +1,22 @@
+{
+  "name": "express-router-decorators",
+  "version": "1.0.0",
+  "description": "Write your Express (4+) routers declaratively with ES2015 classes and ES decorators. TypeScript and Babel supported.",
+  "main": "./dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "tsc:watch": "tsc -w",
+    "build": "tsc",
+    "test": "tsc && ava dist/test.js"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.35",
+    "ava": "^0.19.1",
+    "express": "^4.15.2",
+    "sinon": "^2.1.0",
+    "typescript": "^2.2.2"
+  },
+  "peerDependencies": {
+    "express": "4.x.x"
+  }
+}
