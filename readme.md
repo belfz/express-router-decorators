@@ -8,7 +8,7 @@ TypeScript and Babel supported.
 Using express-router-decorators, you can define your Router controller as ES2015 class, which lets you keep cleaner and well-readable code. Remember to add `@Root` decorator to the class - this is a 'mounting point' of your router.
 Particular paths in your router are defined using `@Path` decorator, which takes the path param (either string or regexp, as supported by Express) as its first argument. Second argument expects an http method name (string), but it is optional and defaults to `'get'` ([see the list of all http methods supported by express](https://expressjs.com/en/4x/api.html#routing-methods)).
 
-```
+```javascript
 import * as express from 'express';
 import { bindControllers, Root, Path } from 'express-router-decorators';
 
@@ -31,7 +31,7 @@ app.listen(1221, () => console.log('server ready at localhost:1221'));
 Inheritance is also supported. You can extend your router classes with other classes!
 The router created with `Greeter` class below will also have `/hola` route (inherited from `SpanishGreeter` class).
 
-```
+```javascript
 class SpanishGreeter {
   @Path('/hola')
   hola (req, res) {
@@ -57,13 +57,13 @@ class Greeter extends SpanishGreeter {
 ### TypeScript:
 Make sure to add following two lines in the `"compilerOptions"` of your `tsconfig.json` file:
 ```
-"experimentalDecorators":true,
+"experimentalDecorators": true,
 "emitDecoratorMetadata": true
 ```
 
 ### Babel:
 You will need `"transform-decorators-legacy"` plugin (`npm install babel-plugin-transform-decorators-legacy --save-dev`) in your `.babelrc` file, eg:
-```
+```json
 {
   "presets": ["es2015", "stage-2"],
   "plugins": ["transform-decorators-legacy"]
