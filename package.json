@@ -2,6 +2,10 @@
   "name": "express-router-decorators",
   "version": "1.0.0",
   "description": "Write your Express (4+) routers declaratively with ES2015 classes and ES decorators. TypeScript and Babel supported.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belfz/express-router-decorators"
+  },
   "main": "./dist/index.js",
   "license": "MIT",
   "scripts": {
